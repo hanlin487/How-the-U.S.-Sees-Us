@@ -1,25 +1,51 @@
 <!DOCTYPE html>
+
 <html lang="en" dir="ltr">
   <head>
+    <title>How the US Sees U</title>
+
+        <meta charset="UTF-8">
+        <meta name="keywords" content="SD Hacks, Hackthon Project">
+        <meta name="description" content="SD Hacks Website">
+        <meta name="author" content="Aref Malek">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/evil-icons@1.9.0/assets/evil-icons.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/evil-icons@1.9.0/assets/evil-icons.min.js"></script>
+
+        <link rel="stylesheet" href="../static/css/menu.css">
+
     <meta charset="utf-8">
-    <title>Flask Parent Template</title>
-    
-    <link rel="stylesheet" href="{{ url_for('static',    filename='css/template.css') }}">
-    
-</head>
+  </head>
   <body>
     <header>
-      <div class="container">
-        <h1 class="logo">Menu</h1>
-        <strong><nav>
-          <ul class="menu">
-            <li><a href="{{ url_for('home') }}"> Home </a></li>
-            <li><a href="{{ url_for('upload_image') }}">Upload</a></li>
-          </ul>
-        </nav></strong>
+      <div class = ".intro">
+
+        <h1>How the US Sees U</h1>
+        <h3>Can the US disenfranchise you just off Looks?</h3>
+      </div>
+      <div class = "info-container">
+        <div class = "info">
+          <a href="https://github.com/arefmalek/Electoral_census" target="_blank">
+            <h4>How did we calulate this?</h4>
+        </a>
+        </div>
+        <div class = "info">
+          <a href="https://sanjay-r-92099.medium.com/americas-dark-voting-legacy-37824620426a" target="_blank">
+              <h4>What does this mean?</h4>
+          </a>
+        </div>
+
+        <div class = "info">
+          <a href="{{ url_for('upload_image') }}" target="_blank">
+              <h4>Enough Talk, let's try it out!</h4>
+          </a>
+        </div>
+
       </div>
     </header>
-
+    <p style = "text-align: center;">Our project for SD Hacks 2021</p>
     
 {% block content %}
 {% endblock %}

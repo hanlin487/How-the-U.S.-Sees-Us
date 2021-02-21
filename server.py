@@ -4,7 +4,7 @@ import os
 import demoScript as ds 
 
 
-UPLOAD_FOLDER = 'E:/Documents/Coding/ElectoralPrediction/uploaded_images'
+UPLOAD_FOLDER = '/home/arefmalek/Desktop/How-The-US-seeS-U/uploaded_images'
 ALLOWED_EXTENSIONS = set(["png", "jpg", "jpeg", "gif"])
 
 app = Flask(__name__)
@@ -12,7 +12,7 @@ app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 
 @app.route("/")
 def home():
-    return "Welcome to the Disenfranchisement Calculator" + render_template('menu.html')
+    return render_template('menu.html')
 
 @app.route('/upload-image', methods=["GET", "POST"])
 def upload_image():
@@ -33,7 +33,7 @@ def upload_image():
             image.save(os.path.join(app.config["UPLOAD_FOLDER"], filename))
 
         
-        return "upload successful :) \n" + str(ds.predict_path('E:/Documents/Coding/ElectoralPrediction/uploaded_images/'+image.filename))
+        return str(ds.predict_path('/home/arefmalek/Desktop/How-The-US-seeS-U/uploaded_images/'+image.filename))
 
     return render_template('uploader.html') 
 

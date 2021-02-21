@@ -8,7 +8,7 @@ data = data.drop('Label', 1)
 raceDict = {
 'Black': "Black or African American alone", 
 "White": "White alone",
-"Asian": "Asian alone",
+"East Asian": "Asian alone",
 "Latino_Hispanic": "Hispanic or Latino (of any race)"
 }
 
