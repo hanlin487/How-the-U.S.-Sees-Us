@@ -63,9 +63,11 @@ def get_information(v):
     gender = v["results"][0]["outputs"][3]["data"]["regions"][0]["data"]["concepts"][0]
     age = v["results"][0]["outputs"][4]["data"]["regions"][0]["data"]["concepts"][0]
 
+    race = cen.find_race(race)
+    age = cen.find_age(age)
+    gender = cen.find_gender(gender)
+
     return race, gender, age
 
 
-
-
-print(predict_path("uploaded_images/bobby.jpeg"))
+print(predict_path("server/uploaded_images/bobby.jpeg"))

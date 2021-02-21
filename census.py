@@ -2,9 +2,10 @@ import pandas as pd
 import numpy as np
 
 data = pd.read_csv("data/electoral_data.csv")
+data.index = data.Label
+data = data.drop('Label', 1)
 
-
-demoDict = {
+raceDict = {
 'Black': "Black or African American alone", 
 "White": "White alone",
 "Asian": "Asian alone",
@@ -32,8 +33,7 @@ def find_info(info, infoDict):
     key = info["name"]
     print(key)
     if key in list(infoDict.keys()):
-        print(infoDict["key"])
-        return data.loc(infoDict["key"])
+        return data.loc[infoDict[key]].Average
     
     print("we couldn't find that in our dictionary")
     return pd.Series(np.zeros(10))
@@ -46,4 +46,3 @@ def find_age(info):
 
 def find_gender(info):
     return find_info(info, genderDict)
-
