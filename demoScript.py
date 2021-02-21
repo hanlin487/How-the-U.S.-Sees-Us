@@ -63,11 +63,14 @@ def get_information(v):
     gender = v["results"][0]["outputs"][3]["data"]["regions"][0]["data"]["concepts"][0]
     age = v["results"][0]["outputs"][4]["data"]["regions"][0]["data"]["concepts"][0]
 
+    disenfranchise = [race["name"], age["name"], gender["name"]]
+
     race = cen.find_race(race)
     age = cen.find_age(age)
     gender = cen.find_gender(gender)
 
-    return race, gender, age
+    answer = "Over the past 10 years, the electoral college, on average, this many votes from you based on your demographics\nRace - {}: {}\nAge - {}: {}\nGender - {}: {}\n".format(
+      disenfranchise[0], race, disenfranchise[1], age, disenfranchise[2], gender
+    )
 
-
-print(predict_path("server/uploaded_images/bobby.jpeg"))
+    return answer
