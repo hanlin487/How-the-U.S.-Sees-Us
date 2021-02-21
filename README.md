@@ -1,3 +1,6 @@
+# How does the US see us?
+First thing first I would like to acknowledge that this was the passion project of a whole gang of people, and although it seems simple now, trust me when I say this has the impact to be HUGE
+
 ## Inspiration
 We all know where the Electoral College has preference (Wyoming Nebraska etc.), but we also know WHO the electoral college prefers
 ## What it does
