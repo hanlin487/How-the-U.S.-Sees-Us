@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-data = pd.read_csv("./electoral_data.csv")
+data = pd.read_csv("data/electoral_data.csv")
 
 
 demoDict = {
