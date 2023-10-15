@@ -2,4 +2,3 @@ Program that takes in an image of a person (jpeg, jpg, png) and analyzes it and 
 
 Run server.py and it'll give you a local hosted address where the user will be able to upload images to be run through the program.
 
-I only did the server side, the actual algorithm detecting thing was done by https://github.com/arefmalek
