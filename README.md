@@ -1,22 +1,8 @@
-# How does the US see us?
-First thing first I would like to acknowledge that this was the passion project of a whole gang of people, and although it seems simple now, trust me when I say this has the impact to be HUGE
+# The Project
+The project is essentially a website. It takes in an image of a person, computes their demographics, finds the voter disparity of the corresponding demographics, and outputs the 
+results. This project was made during the SD Hacks 2021 Hackathon.
 
-## Inspiration
-We all know where the Electoral College has preference (Wyoming Nebraska etc.), but we also know WHO the electoral college prefers
-## What it does
-Based purely off someones image, we can predict their race, age, and gender and correspondingly provide average disenfranchisement for that demographics from the past 10 years
-
-## How we built it
-We built this with a Flask application in tandem with the ClarafAI API. We connected that with a Pandas API call to our database of disenfranchisements to pull the average disenfranchisement over the past 10 years
-
-## Challenges we ran into
-It was our first time working with Flask, so we had a ton of compatibility issues
-
-## Accomplishments that we're proud of
-It's pretty amazing that based purely off an image, a computer can predict someone's race, age, and gender just like that. I also think it's kind of fascinating how we can connect that with publically available info (like census data), to show how it affects somebody.
-
-## What we learned
-How to use Flask, ClarafAI, in connection with Pandas.
-
-## What's next for How the US Sees us
-We want to make it prettier (pretty obvious we aren't web development guys), as well as start to develop our OWN CNN's to predict this stuff, rather than use an API
+Running server.py will launch the website, some python modules are needed before running such as pandas, flask, and requests. 
+It's also where the layout of the website is.
+census.py holds the methods for manipulating data from the electoral_data.csv file which holds the existing disparity data.
+demoScript.py is the actual algorithm that's running to calculate demographics and format the output.

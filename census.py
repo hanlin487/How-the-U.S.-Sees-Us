@@ -3,7 +3,7 @@ import numpy as np
 
 data = pd.read_csv("data/electoral_data.csv")
 data.index = data.Label
-data = data.drop('Label', 1)
+# data = data.drop('Label', 1)
 
 raceDict = {
 'Black': "Black or African American alone", 

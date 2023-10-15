@@ -4,7 +4,7 @@ import os
 import demoScript as ds 
 
 
-UPLOAD_FOLDER = '/home/arefmalek/Desktop/How-The-US-seeS-U/uploaded_images'
+UPLOAD_FOLDER = './uploaded_images/'
 ALLOWED_EXTENSIONS = set(["png", "jpg", "jpeg", "gif"])
 
 app = Flask(__name__)
@@ -32,8 +32,7 @@ def upload_image():
             filename = secure_filename(image.filename)
             image.save(os.path.join(app.config["UPLOAD_FOLDER"], filename))
 
-        
-        return str(ds.predict_path('/home/arefmalek/Desktop/How-The-US-seeS-U/uploaded_images/'+image.filename))
+        return str(ds.predict_path('./uploaded_images/'+image.filename))
 
     return render_template('uploader.html') 
 
